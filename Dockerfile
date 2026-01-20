@@ -1,8 +1,13 @@
-FROM --platform=linux/arm64 node:20-alpine
+FROM --platform=$TARGETPLATFORM node:18-alpine
 
 WORKDIR /app
-COPY index.js .
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
 
 EXPOSE 3000
+
 ENTRYPOINT []
 CMD ["npm", "start"]
