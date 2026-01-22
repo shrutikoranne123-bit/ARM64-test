@@ -1,11 +1,15 @@
-# IMPORTANT: No hardcoded architecture here
 FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package.json .
+# Copy only package.json & package-lock.json first
+COPY package*.json ./
+
+# Install dependencies
 RUN npm install --omit=dev
 
-COPY index.js .
+# Copy rest of the app
+COPY . .
 
+# Start the app
 CMD ["npm", "start"]
