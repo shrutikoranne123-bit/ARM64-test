@@ -1,13 +1,11 @@
-# syntax=docker/dockerfile:1
-
-FROM --platform=linux/arm64 node:18-alpine
+# IMPORTANT: No hardcoded architecture here
+FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json .
 RUN npm install --production
 
-COPY . .
+COPY index.js .
 
-EXPOSE 3000
-CMD ["node", "index.js"]
+CMD ["npm", "start"]

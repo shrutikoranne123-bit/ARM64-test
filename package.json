@@ -1,14 +1,21 @@
 {
-  "name": "my-app",
+  "name": "arm64-running-on-amd64",
   "version": "1.0.0",
-  "description": "Sample Node.js app for ARM64 Docker build",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "shruti",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrutikoranne123-bit/ARM64.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shrutikoranne123-bit/ARM64/issues"
+  },
+  "homepage": "https://github.com/shrutikoranne123-bit/ARM64#readme"
 }
