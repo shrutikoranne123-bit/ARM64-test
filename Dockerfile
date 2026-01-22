@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM --platform=linux/arm64 node:20-alpine
+FROM --platform=linux/arm64 node:18-alpine
 
 WORKDIR /app
 
