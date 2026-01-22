@@ -25,11 +25,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build & Push ARM64 Image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/arm64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            shrutikoranne/my-app:arm64
-            shrutikoranne/my-app:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/my-app:arm64
+            ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
